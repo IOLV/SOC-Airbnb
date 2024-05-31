@@ -1,0 +1,46 @@
+:root{
+    /* Variables */
+    --bg-main: #fff;
+    --bg-footer: #f7f7f7;
+
+    --txt-main: #000;
+    --txt-second: #6a6a6a;
+
+    --lineBrk: #ddd;
+
+    --bordRad-XS: 4px;
+    --bordRad-S: 8px;
+    --bordRad-M: 12px;
+    --bordRad-L: 16px;
+    --bordRad-L: 20px;
+
+    /* Font Variables */
+    --fontSize-XS: 0.625rem;
+    --fontSize-S: 0.75rem;
+    --fontSize-M: 0.875rem;
+    --fontSize-L: 1rem;
+    --fontSize-XL: 1.25rem;
+
+    --fontLine-XS: 0.75rem;
+    --fontLine-S: 1rem;
+    --fontLine-M: 1.25rem;
+    --fontLine-L: 1.5rem;
+    --fontLine-XL: 1.5rem;
+
+    --fontWeight-XS: 200;
+    --fontWeight-S: 400;
+    --fontWeight-M: 600;
+    --fontWeight-L: 800;
+    --fontWeight-XL: 1000;
+}
+
+body {
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+.nav_search{
+    border-radius: 1000px;
+    box-shadow: 0 3px 10px rgba(0 0 0 / 0.1);
+}
+
+.footer {background-color: var(--bg-footer);}
