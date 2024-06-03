@@ -60,8 +60,12 @@ div {
     display: block;
 }
 
-.nav_body{
-    margin-top: 14px;
+.nav {
+    padding-top: 14px;
+    box-shadow: rgb(0 0 0/16%) 0 0 6px;
+}
+
+.nav_search_body{
     margin-inline-end: 16px;
     margin-inline-start: 16px;
 }
@@ -119,6 +123,89 @@ div {
     justify-items: center;
     place-items: center;
     display: grid;
+}
+
+/* Navigation Category Bar*/
+
+/* nav_category_bar variables */
+.nav_category_bar {
+    --chipsbar_box-shadow: rgb(0 0 0/16%) 0 0 6px;
+    --chipsbar_height: 74px;
+    --chipsbar_chip-width: 64px;
+    --chipsbar_chip-spacing: 16px;
+    --contentscroller_scrollsnaptype: none;
+    --contentscroller_auto-columns: max-content;
+    --contentscroller_peek: 24px;
+    --contentscroller_scroller_margin-inline-end: 0;
+    --contentscroller_scroller_margin-inline-start: 0;
+    --contentscroller_gap: var(--chipsbar_chip-spacing);
+    --chipsbar_underline-margin: 12px;
+}
+
+.center {
+    justify-self: center;
+    text-align: center;
+}
+
+.nav_category_bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 100%;
+    height: var(--chipsbar_height);
+    width: 100%;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    padding-inline-end: var(--contentscroller_padding-inline-end, var(--contentscroller_peek, 32px));
+    padding-inline-start: var(--contentscroller_padding-inline-start, var(--contentscroller_peek, 32px));
+    align-content: center;
+}
+
+.nav_category_labels {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: var(--chipsbar_chip-spacing);
+    overflow: clip;
+}
+
+
+.nav_category_icon {
+    width: 24px;
+    height: 24px;
+    grid-area: icon;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav_category_item {
+    display: flex;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+    gap: 4px;
+    grid-template-areas:
+    'icon'
+    'title';
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_category_text {
+    position: relative;
+    grid-area: text;
+}
+
+.nav_category_text_span {
+    display: inline-block;
+}
+
+.nav_category_label:after {
+    background-color: var(--txt-main);
+    height: 2px;
+    top: calc(100% + 12px);
+    content: '';
 }
 
 
