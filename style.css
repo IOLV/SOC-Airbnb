@@ -160,6 +160,22 @@ div {
     align-content: center;
 }
 
+
+.nav_category_label {
+    background-color: transparent;
+    height: 74px;
+    align-content: center;
+    opacity: 0.6742081447963801;
+    color: var(--txt-second);
+    margin: 12px 0 10px;
+    padding: 4px 0;
+    min-width: var(--chipsbar_chip-width);
+}
+
+.nav_category_label.active {
+    min-width: min(calc(var(--chipsbar_chip-width) / 2 + 12px),40px);
+}
+
 .nav_category_labels {
     width: 100%;
     display: flex;
@@ -195,13 +211,23 @@ img {
 .nav_category_text {
     position: relative;
     grid-area: text;
+    font-size: var(--fontSize-S);
+    line-height: var(--fontLine-S);
+    font-weight: var(--fontWeight-M);
 }
 
 .nav_category_text_span {
     display: inline-block;
 }
 
-.nav_category_label:after {
+.active {
+    opacity: 1;
+    color: var(--txt-main);
+}
+
+.active:after {
+    position: absolute;
+    inset-inline: 0;
     background-color: var(--txt-main);
     height: 2px;
     top: calc(100% + 12px);
