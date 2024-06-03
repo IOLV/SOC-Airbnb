@@ -177,13 +177,16 @@ div {
 }
 
 .nav_category_labels {
-    width: 100%;
     display: flex;
     flex-direction: row;
     gap: var(--chipsbar_chip-spacing);
     overflow: clip;
+    width: max-content;
 }
 
+.text {
+    white-space: nowrap;
+}
 
 .nav_category_icon {
     width: 24px;
