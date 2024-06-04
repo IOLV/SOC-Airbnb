@@ -45,8 +45,12 @@ flex: 0 1 auto;
 }
 
 body {
+    position: relative;
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 455px;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    margin: 0;
+    margin: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: .875rem;
@@ -158,9 +162,14 @@ div {
     padding-inline-end: var(--contentscroller_padding-inline-end, var(--contentscroller_peek, 32px));
     padding-inline-start: var(--contentscroller_padding-inline-start, var(--contentscroller_peek, 32px));
     align-content: center;
+    overflow-x: auto;
+    overflow-y: clip;
 }
 
 
+.nav_category_bar::-webkit-scrollbar { 
+    display: none; 
+}
 .nav_category_label {
     background-color: transparent;
     height: 74px;
@@ -180,7 +189,6 @@ div {
     display: flex;
     flex-direction: row;
     gap: var(--chipsbar_chip-spacing);
-    overflow: clip;
     width: max-content;
 }
 
