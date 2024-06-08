@@ -255,7 +255,6 @@ div {
 .content_box {
     padding: 0;
     border-radius: var(--bordRad-M);
-}
 
 .content_box_slide {
     aspect-ratio: var(--aspect-ratio-wrapper-ratio, unset);
@@ -270,6 +269,8 @@ div {
     background-repeat: no-repeat;
     position: relative;
     vertical-align: bottom;
+    margin-bottom: 12px;
+}
 }
 
 .content_box_slide_image>img {
@@ -285,6 +286,27 @@ img {
     object-fit: cover;
     overflow-clip-margin: content-box;
     background-size: cover;
+}
+
+.content_box_text {
+    line-height: 19px;
+    line-height: 1.1875rem;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    display: grid;
+    gap: 4px
+}
+
+.fontWeight400 {
+    font-weight: var(--fontWeight-S);
+}
+
+.fontWeight600 {
+    font-weight: var(--fontWeight-M);
+}
+
+.fontWeight800 {
+    font-weight: var(--fontWeight-L);
 }
 
 .footer {background-color: var(--bg-footer);}
