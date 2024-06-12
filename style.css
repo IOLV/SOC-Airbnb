@@ -85,14 +85,48 @@ div {
     display: block;
 }
 
+button {
+    position: relative;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
 .center {
     justify-self: center;
     text-align: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
 }
 
 .active {
     opacity: 1;
     color: var(--txt-main);
+}
+
+.hidden {
+    display: none;
+}
+
+.text {
+    white-space: nowrap;
 }
 
 /* Images */
@@ -171,7 +205,6 @@ h2 {
     font-weight: var(--fontWeight-S);
     line-height: var(--fontLine-S);
     text-overflow: ellipsis;
-    display: flex;
     gap: 5px;
 }
 
@@ -251,17 +284,11 @@ h2 {
 }
 
 .nav_category_labels {
-    display: flex;
-    flex-direction: row;
     gap: var(--chipsbar_chip-spacing);
     width: max-content;
 }
 
 /* Navigation Category Bar Text */
-.text {
-    white-space: nowrap;
-}
-
 .text.active {
     color: var(--txt-second);
 }
@@ -286,14 +313,12 @@ h2 {
 }
 
 .nav_category_item {
-    display: flex;
     grid-template-rows: auto auto;
     grid-template-columns: auto 1fr;
     gap: 4px;
     grid-template-areas:
     'icon'
     'title';
-    flex-direction: column;
     align-items: center;
 }
 /* End of Navigation Bar Settings <<
@@ -384,18 +409,36 @@ h2 {
 }
 
 .footer_header_category_button {
-    position: relative;
-    background: none;
     margin: 6px 6px 6px 0;
     line-height: 14px;
     font-size: 14px;
     font-weight: var(--fontWeight-M);
     border-radius: 8px;
-    border: none;
-    outline: none;
     padding: 10px;
     align-content: center;
     color: var(--txt-third);
+}
+
+/* Footer Locations Section */
+::marker {
+    content: '';
+}
+
+.footer_locations>ul.grid {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 8px;
+    row-gap: 24px;
+    gap: 24px 8px;
+}
+
+.footer_locations button {
+    gap: 4px;
+}
+
+.footer_sections {
+    padding-top: 32px;
 }
 
 .arrow_end {
