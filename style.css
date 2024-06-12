@@ -1,5 +1,6 @@
+/* Variables */
 :root{
-    /* Variables */
+/* Colour Variables */
     --bg-main: #fff;
     --bg-footer: #f7f7f7;
 
@@ -9,15 +10,19 @@
 
     --lineBrk: #ddd;
 
+/* Size Variables */
     --bordRad-XS: 4px;
     --bordRad-S: 8px;
     --bordRad-M: 12px;
     --bordRad-L: 16px;
     --bordRad-L: 20px;
+    
+    --search-bar-prefix_width: 42px;
+    --aspect-ratio-wrapper-ratio: 20/19;
+    --content_box_size_width: 100%;
+    --content_box_size_height: 100%;
 
-
-
-    /* Font Variables */
+/* Font Variables */
     --fontSize-XS: 0.625rem;
     --fontSize-S: 0.75rem;
     --fontSize-M: 0.875rem;
@@ -35,13 +40,23 @@
     --fontWeight-M: 600;
     --fontWeight-L: 800;
     --fontWeight-XL: 1000;
-    
-    --search-bar-prefix_width: 42px;
-    --aspect-ratio-wrapper-ratio: 20/19;
-    --content_box_size_width: 100%;
-    --content_box_size_height: 100%;
+}
+.fontWeight400 {
+    font-weight: var(--fontWeight-S);
 }
 
+.fontWeight600 {
+    font-weight: var(--fontWeight-M);
+}
+
+.fontWeight800 {
+    font-weight: var(--fontWeight-L);
+}
+/* End of Variables <<
+
+////////////////////////////////////////// 
+
+>> Start of General Site Settings */
 *, *:before, *:after {
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -70,11 +85,53 @@ div {
     display: block;
 }
 
+.center {
+    justify-self: center;
+    text-align: center;
+}
+
+.active {
+    opacity: 1;
+    color: var(--txt-main);
+}
+
+/* Images */
+img {
+    display: inline-block;
+    vertical-align: middle;
+    width: var(--content_box_size_width);
+    height: var(--content_box_size_height);
+    overflow: clip;
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+    background-size: cover;
+}
+
+.line_break {
+    background-color: var(--lineBrk);
+    height: 1px;
+}
+
+/* Headers */
+h2 {
+    font-weight: var(--fontWeight-M);
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: -12px;
+    color: var(--txt-second);
+}
+
+/* End of General Site Settings <<
+
+////////////////////////////////////////// 
+
+>> Start of Navigation Bar */
 .nav {
     padding-top: 14px;
     box-shadow: 0 6px 6px -6px rgb(0 0 0 / 16%);
 }
 
+/* Navigation Search Box*/
 .nav_search_body{
     margin-inline-end: 16px;
     margin-inline-start: 16px;
@@ -99,6 +156,7 @@ div {
     margin: 0;
 }
 
+/* Navigation Search Box Text */
 .nav_search_textmain{
     color: var(--txt-main);
     font-size: var(--fontSize-M);
@@ -122,6 +180,7 @@ div {
     padding-left: 2px;
 }
 
+/* Navigation Search Box Icon */
 .nav_search_icon{
     display: block;
     height: 20px;
@@ -134,8 +193,11 @@ div {
     place-items: center;
     display: grid;
 }
+/* End of Navigation Search Box <<
 
-/* Navigation Category Bar*/
+////////////////////////////////////////// 
+
+>> Start of Navigation Category Bar*/
 
 /* nav_category_bar variables */
 .nav_category_bar {
@@ -150,11 +212,6 @@ div {
     --contentscroller_scroller_margin-inline-start: 0;
     --contentscroller_gap: var(--chipsbar_chip-spacing);
     --chipsbar_underline-margin: 12px;
-}
-
-.center {
-    justify-self: center;
-    text-align: center;
 }
 
 .nav_category_bar {
@@ -176,6 +233,8 @@ div {
 .nav_category_bar::-webkit-scrollbar, .footer_header_category::-webkit-scrollbar { 
     display: none; 
 }
+
+/* Navigation Category Bar Labels */
 .nav_category_label {
     background-color: transparent;
     height: 74px;
@@ -198,6 +257,7 @@ div {
     width: max-content;
 }
 
+/* Navigation Category Bar Text */
 .text {
     white-space: nowrap;
 }
@@ -206,6 +266,19 @@ div {
     color: var(--txt-second);
 }
 
+.nav_category_text {
+    position: relative;
+    grid-area: text;
+    font-size: var(--fontSize-S);
+    line-height: var(--fontLine-S);
+    font-weight: var(--fontWeight-M);
+}
+
+.nav_category_text_span {
+    display: inline-block;
+}
+
+/* Navigation Category Bar Icon + Layout */
 .nav_category_icon {
     width: 24px;
     height: 24px;
@@ -223,25 +296,11 @@ div {
     flex-direction: column;
     align-items: center;
 }
+/* End of Navigation Bar Settings <<
 
-.nav_category_text {
-    position: relative;
-    grid-area: text;
-    font-size: var(--fontSize-S);
-    line-height: var(--fontLine-S);
-    font-weight: var(--fontWeight-M);
-}
+////////////////////////////////////////// 
 
-.nav_category_text_span {
-    display: inline-block;
-}
-
-.active {
-    opacity: 1;
-    color: var(--txt-main);
-}
-
-
+>> Start of Site Content */
 .content {
     padding-bottom: 8px;
 }
@@ -256,14 +315,6 @@ div {
     gap: 40px;
 }
 
-h2 {
-    font-weight: var(--fontWeight-M);
-    font-size: 32px;
-    line-height: 32px;
-    margin-bottom: -12px;
-    color: var(--txt-second);
-}
-
 .content_box {
     padding: 0;
     border-radius: var(--bordRad-M);
@@ -274,6 +325,7 @@ h2 {
     border-radius: var(--bordRad-M);
 }
 
+/* Content Box Image/Slideshow */
 .content_box_slide_image {
     width: var(--content_box_size_width);
     height: var(--content_box_size_height);
@@ -289,17 +341,7 @@ h2 {
     border-radius: var(--bordRad-M);
 }
 
-img {
-    display: inline-block;
-    vertical-align: middle;
-    width: var(--content_box_size_width);
-    height: var(--content_box_size_height);
-    overflow: clip;
-    object-fit: cover;
-    overflow-clip-margin: content-box;
-    background-size: cover;
-}
-
+/* Content Box Text */
 .content_box_text {
     line-height: 19px;
     line-height: 1.1875rem;
@@ -308,21 +350,11 @@ img {
     display: grid;
     gap: 4px
 }
+/* End of Site Content <<
 
-.fontWeight400 {
-    font-weight: var(--fontWeight-S);
-}
+//////////////////////////////////////////
 
-.fontWeight600 {
-    font-weight: var(--fontWeight-M);
-}
-
-.fontWeight800 {
-    font-weight: var(--fontWeight-L);
-}
-
-
-/* Footer */
+>> Start of Footer */
 .footer {
     background-color: var(--bg-footer);
     margin-inline: auto;
@@ -330,6 +362,7 @@ img {
     padding-block: 48px
 }
 
+/* Footer Header */
 .footer_header_title {
     font-size: 22px;
     line-height: 22px;
@@ -341,6 +374,7 @@ img {
     overflow-x: auto;
 }
 
+/* Footer Header Buttons */
 .footer_header_category_buttons {
     display: flex;
 }
@@ -378,11 +412,6 @@ img {
     background-image: linear-gradient(to right, transparent, #f7f7f7, #f7f7f7, #f7f7f7);
 }
 
-.line_break {
-    background-color: var(--lineBrk);
-    height: 1px;
-}
-
 .footer_header_category_button.active:after {
     height: 2px;
     content: '';
@@ -393,3 +422,4 @@ img {
     background-color: var(--txt-second);
     margin-top: 28px;
 }
+/* End of Footer */
