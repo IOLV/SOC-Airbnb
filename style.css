@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
 /* Variables */
 :root{
 /* Colour Variables */
@@ -47,6 +54,7 @@
 
 .fontWeight600 {
     font-weight: var(--fontWeight-M);
+    color: #222;
 }
 
 .fontWeight800 {
@@ -69,7 +77,7 @@ body {
     position: relative;
     margin-left: auto; 
     margin-right: auto;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-family: Montserrat, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     margin: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -127,6 +135,10 @@ button {
 
 .text {
     white-space: nowrap;
+}
+
+.subtitle {
+    color: var(--txt-third);
 }
 
 /* Images */
@@ -393,6 +405,7 @@ h2 {
     line-height: 22px;
     font-weight: var(--fontWeight-M);
     margin-bottom: 8px;
+    margin-top: 0;
 }
 
 .footer_header_category {
@@ -439,7 +452,6 @@ h2 {
 
 .footer_sections {
     padding-top: 32px;
-    padding-block: 48px;
 }
 
 .arrow_end {
@@ -496,5 +508,6 @@ footer h3 {
     font-size: var(--fontSize-M);
     font-weight: var(--fontWeight-M);
     margin-top: 0;
+    color: var(--txt-second);
 }
 /* End of Footer */
