@@ -439,6 +439,7 @@ h2 {
 
 .footer_sections {
     padding-top: 32px;
+    padding-block: 48px;
 }
 
 .arrow_end {
@@ -464,5 +465,36 @@ h2 {
     left: 11px;
     background-color: var(--txt-second);
     margin-top: 28px;
+}
+
+footer.footer_linebreak {
+    width: 100%;
+}
+
+.footer_linebreak {
+    border-top: 1px solid var(--lineBrk);
+}
+
+footer {
+    background-color: var(--bg-footer);
+}
+
+footer section {
+    padding-inline: 24px;
+    padding-block: 24px;
+}
+
+footer ul {
+    padding-inline: unset;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+}
+
+footer h3 {
+    font-size: var(--fontSize-M);
+    font-weight: var(--fontWeight-M);
+    margin-top: 0;
 }
 /* End of Footer */
