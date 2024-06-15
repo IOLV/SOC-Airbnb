@@ -495,7 +495,7 @@ footer section {
     padding-inline: 24px;
 }
 
-footer ul {
+ul, ol {
     padding-inline: unset;
     list-style: none;
     padding: 0;
@@ -515,5 +515,53 @@ footer h3 {
 }
 footer section div {
     padding-block: 24px;
+}
+
+/* Footer Notice Section*/
+.footer_notice {
+    padding-bottom: 64px;
+}
+.footer_notice button {
+    font-size: var(--fontSize-M);
+    color: var(--txt-main);
+}
+
+.footer_notice button:first-child {
+    margin-right: 24px;
+}
+
+.footer_notice span:first-child {
+    margin-right: var(--footer-icon-spacing, 8px);
+    font-size: var(--fontSize-L);
+}
+
+.footer_notice div:first-child {
+    margin-bottom: 22px;
+    padding-top: 12px;
+}
+
+.footer_notice div {
+    padding: 0;
+}
+
+ol {
+    display: inline;
+}
+
+ol li {
+    display: inline-block;
+    line-height: 26px;
+}
+
+.dot {
+    display: inline-block;
+    text-align: center;
+    white-space: pre-wrap;
+    width: 19px;
+}
+
+ol li a {
+    line-height: 1.125rem;
+    position: relative;
 }
 /* End of Footer */
