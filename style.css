@@ -418,6 +418,7 @@ nav a {
     scroll-snap-stop: always;
     gap: 0;
     margin-bottom: 12px;
+    background-color: var(--bg-footer);
 }
 
 a {
