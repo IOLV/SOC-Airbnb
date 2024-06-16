@@ -403,8 +403,25 @@ nav a {
 }
 
 .content_box_slide {
+    display: grid;
     aspect-ratio: var(--aspect-ratio-wrapper-ratio, unset);
     border-radius: var(--bordRad-M);
+    grid-auto-columns: 100%;
+    scroll-snap-type: inline mandatory;
+    justify-content: flex-start;
+    grid-auto-flow: column;
+    margin: 0;
+    scrollbar-width: none;
+    overflow: auto hidden;
+    scroll-snap-type: inline mandatory;
+    scroll-snap-align: none;
+    scroll-snap-stop: always;
+    gap: 0;
+}
+
+a {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
 }
 
 /* Content Box Image/Slideshow */
@@ -417,10 +434,6 @@ nav a {
     position: relative;
     vertical-align: bottom;
     margin-bottom: 12px;
-}
-
-.content_box_slide_image>img {
-    border-radius: var(--bordRad-M);
 }
 
 /* Content Box Text */
