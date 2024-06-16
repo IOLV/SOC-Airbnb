@@ -87,6 +87,7 @@ body {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     max-width: 600px;
+    overflow: auto;
 }
 
 div {
@@ -358,7 +359,6 @@ nav .active {
 }
 
 nav div {
-    margin: 0 auto;
     max-width: 560px;
 }
 
@@ -370,7 +370,6 @@ nav a {
 }
 
 .nav_site_icon {
-    width: 30px;
     height: 30px;
 }
 
@@ -446,7 +445,7 @@ a {
 .content_box_overlay {
     overflow: clip;
     overflow: clip;
-    position: absolute;
+    position: sticky;
     contain: strict;
     pointer-events: none;
     font-weight: var(--fontWeight-M);
