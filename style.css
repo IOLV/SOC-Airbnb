@@ -369,6 +369,16 @@ nav a {
     flex-direction: column;
 }
 
+nav svg {
+    display: block;
+    fill: none; 
+    height: 24px; 
+    width: 24px; 
+    stroke: currentcolor; 
+    stroke-width: 2; 
+    overflow: visible;
+}
+
 .nav_site_icon {
     height: 30px;
 }
@@ -652,6 +662,10 @@ a {
     gap: 4px;
 }
 
+.footer_locations svg {
+    display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;
+}
+
 .footer_sections {
     padding-top: 32px;
 }
@@ -744,6 +758,13 @@ footer section div {
 
 .footer_notice div {
     padding: 0;
+}
+
+.footer_notice svg {
+    display: block; 
+    height: 16px; 
+    width: 16px; 
+    fill: currentcolor;
 }
 
 ol {
