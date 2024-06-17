@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: normal;
-}
-
 /* Variables */
 :root{
 /* Colour Variables */
@@ -85,6 +78,7 @@ body {
     line-height: 1.43;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     max-width: 600px;
     overflow: auto;
@@ -150,9 +144,8 @@ img {
     vertical-align: middle;
     width: var(--content_box_size_width);
     height: var(--content_box_size_height);
-    overflow: clip;
+    overflow: hidden;
     object-fit: cover;
-    overflow-clip-margin: content-box;
     background-size: cover;
 }
 
@@ -279,7 +272,7 @@ h2 {
     padding-inline-start: var(--contentscroller_padding-inline-start, var(--contentscroller_peek, 32px));
     align-content: center;
     overflow-x: auto;
-    overflow-y: clip;
+    overflow-y: hidden;
 }
 
 
@@ -421,6 +414,17 @@ nav a {
     position: relative;
 }
 
+@supports (-webkit-scrollbar: none) {
+    .content_box_slide {
+        scrollbar-width: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
 a {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
@@ -443,10 +447,9 @@ a {
 
 /* Content Box Overlay */
 .content_box_overlay {
-    overflow: clip;
-    overflow: clip;
+    overflow: hidden;
+    overflow: hidden;
     position: sticky;
-    contain: strict;
     pointer-events: none;
     font-weight: var(--fontWeight-M);
     top: 0;
@@ -555,7 +558,7 @@ a {
     grid-area: 3 / 2 / 4 / 3; 
     max-width: 55px;
     margin: auto auto 12px auto;
-    overflow: clip;
+    overflow: hidden;
 }
 
 .slide_progress_bullet {
