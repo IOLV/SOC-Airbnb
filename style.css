@@ -17,7 +17,7 @@
     --bordRad-L: 16px;
     --bordRad-L: 20px;
     
-    --search-bar-prefix_width: 42px;
+    --search-bar-prefix_width: 52px;
     --aspect-ratio-wrapper-ratio: 20/19;
     --content_box_size_width: 100%;
     --content_box_size_height: 100%;
@@ -170,7 +170,7 @@ h2 {
 >> Start of Navigation Bar */
 .nav {
     padding-top: 14px;
-    box-shadow: 0 6px 6px -6px rgb(0 0 0 / 16%);
+    box-shadow: 0 0 6px 0 rgb(0 0 0 / 16%);
     position: sticky;
     z-index: 1;
     top: 0;
@@ -179,8 +179,8 @@ h2 {
 
 /* Navigation Search Box*/
 .nav_search_body{
-    margin-inline-end: 16px;
-    margin-inline-start: 16px;
+    margin-inline-end: 24px;
+    margin-inline-start: 24px;
 }
 
 .nav_search{
