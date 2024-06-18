@@ -121,11 +121,6 @@ button {
     flex-direction: row;
 }
 
-.active {
-    opacity: 1;
-    color: var(--txt-main);
-}
-
 .hidden {
     display: none;
 }
@@ -294,6 +289,11 @@ h2 {
 
 .nav_category_label.active {
     min-width: min(calc(var(--chipsbar_chip-width) / 2 + 12px),40px);
+}
+
+.active {
+    opacity: 1;
+    color: var(--txt-main);
 }
 
 .nav_category_labels {
