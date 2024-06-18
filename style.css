@@ -740,14 +740,11 @@ footer section div {
 .footer_notice button {
     font-size: var(--fontSize-M);
     color: var(--txt-main);
-}
-
-.footer_notice button:first-child {
     margin-right: 24px;
 }
 
-.footer_notice span:first-child {
-    margin-right: var(--footer-icon-spacing, 8px);
+.footer_notice_icon {
+    margin-right: 5px;
     font-size: var(--fontSize-L);
 }
 
